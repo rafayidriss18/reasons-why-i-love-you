@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Tanisha reasons why i love you ❤️</title>
+  <style>
+    body {
+      background-color: #ffe6f2;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #ff2e88;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 8px;
+      font-size: 15px;
+      background-color: #ff2e88;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #loveBarContainer {
+      width: 80%;
+      background-color: #ddd;
+      margin: 20px auto;
+      border-radius: 20px;
+    }
+
+    #loveBar {
+      width: 0%;
+      height: 25px;
+      background-color: #ff2e88;
+      border-radius: 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Why I Choose You Tanisha 💗</h1>
+
+  <p id="reason">click to see why i choose you tanisha</p>
+  <button onclick="showReason()">show reason ❤️</button>
+
+  <div id="loveBarContainer">
+    <div id="loveBar"></div>
+  </div>
+
+  <p id="loveText"></p>
+
+  <button onclick="activateProtection()">activate protection 👑</button>
+  <p id="protectionText"></p>
+
+  <button onclick="showSad()">click when sad 💌</button>
+  <button onclick="showOverthinking()">click when overthinking 💭</button>
+  <button onclick="showMissing()">click when missing me ❤️</button>
+
+  <p id="moodText"></p>
+
+  <button onclick="futurePromise()">future promise 💍</button>
+  <p id="futureText"></p>
+
+  <script>
+    const reasons = [
+      "i choose you tanisha when you smile because it fixes everything",
+      "i choose you tanisha when youre upset because your heart deserves protection",
+      "i choose you tanisha when you overthink because calming you matters to me",
+      "i choose you tanisha every single day without hesitation",
+      "i choose you tanisha because without you i would have nothing to live for"
+      // PASTE THE REST OF YOUR 200 REASONS HERE
+    ];
+
+    let remaining = [...reasons];
+    let clickCount = 0;
+    let loveLevel = 0;
+
+    function showReason() {
+
+      clickCount++;
+
+      if (clickCount === 50) {
+        document.getElementById("reason").innerText =
+        "you are still clicking which means you love me more but the truth is i will always love you more tanisha";
+        return;
+      }
+
+      if (remaining.length === 0) {
+        document.getElementById("reason").innerText =
+        "i would still choose you tanisha even without a single reason because you are my forever";
+        return;
+      }
+
+      const randomIndex = Math.floor(Math.random() * remaining.length);
+      document.getElementById("reason").innerText = remaining[randomIndex];
+      remaining.splice(randomIndex, 1);
+
+      // love meter
+      loveLevel += 2;
+      if (loveLevel <= 100) {
+        document.getElementById("loveBar").style.width = loveLevel + "%";
+      } else {
+        document.getElementById("loveText").innerText =
+        "error love exceeds measurable limits";
+      }
+    }
+
+    function activateProtection() {
+      document.getElementById("protectionText").innerText =
+      "tanisha is now protected by Rafay energy nothing bad allowed";
+    }
+
+    function showSad() {
+      document.getElementById("moodText").innerText =
+      "if you are sad right now come here let me hold you everything will be okay we fix things together you are not alone and you never will be tanisha";
+    }
+
+    function showOverthinking() {
+      document.getElementById("moodText").innerText =
+      "stop overthinking for a second breathe you are safe you are loved you are doing better then you think and i am right here with you tanisha i alwaays will be so text me and tell me everything and ill hold you and make everything okay";
+    }
+
+    function showMissing() {
+      document.getElementById("moodText").innerText =
+      "if you are missing me right now just know i am missing you more and counting the seconds until i can hold you properly again tanisha";
+    }
+
+    function futurePromise() {
+      document.getElementById("futureText").innerText =
+      "i promise to grow with you not away from you tanisha no matter what happens we face it together";
+    }
+  </script>
+
+</body>
+</html>
